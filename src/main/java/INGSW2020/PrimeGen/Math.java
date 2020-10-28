@@ -25,7 +25,10 @@ public class Math {
 
 	public boolean isPrime(int numero) {
 		
-		for (int i = 2; i*i < numero; i++) {
+		if (numero < 2)
+			return false;
+		
+		for (int i = 2; i*i <= numero; i++) {
 			if (numero%i==0)
 				return false;
 			}
